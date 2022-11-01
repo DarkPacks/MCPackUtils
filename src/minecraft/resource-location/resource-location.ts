@@ -14,4 +14,12 @@ export class ResourceLocation {
   private static isValidFormat(id: string): boolean {
     return validIDRegex.test(id);
   }
+
+  public toString(): string {
+    return this.id;
+  }
+
+  public toJSON(): string {
+    return this.toString();
+  }
 }

@@ -14,4 +14,12 @@ export class ResourceNamespace {
   private static isValidFormat(namespace: string): boolean {
     return validNamespaceRegex.test(namespace);
   }
+
+  public toString(): string {
+    return this.namespace;
+  }
+
+  public toJSON(): string {
+    return this.toString();
+  }
 }

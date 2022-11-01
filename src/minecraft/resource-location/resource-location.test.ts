@@ -12,6 +12,14 @@ describe("ResourceLocation", () => {
     expect(() => new ResourceLocation("te-st:te/st")).not.toThrow();
   });
 
+  it("stringifies", () => {
+    const id = "test:test";
+    const rl = new ResourceLocation(id);
+
+    expect(JSON.stringify(rl)).toBe(JSON.stringify(id));
+    expect(String(rl)).toBe(id);
+  });
+
   it("throws error if path is missing", () => {
     expect(() => new ResourceLocation("test")).toThrow();
     expect(() => new ResourceLocation("test:")).toThrow();

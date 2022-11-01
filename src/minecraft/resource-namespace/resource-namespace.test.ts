@@ -7,6 +7,14 @@ describe("ResourceNamespace", () => {
     expect(() => new ResourceNamespace("te_st")).not.toThrow();
   });
 
+  it("stringifies", () => {
+    const namespace = "test";
+    const rn = new ResourceNamespace(namespace);
+
+    expect(JSON.stringify(rn)).toBe(JSON.stringify(namespace));
+    expect(String(rn)).toBe(namespace);
+  });
+
   it("throws error if it has uppercase characters", () => {
     expect(() => new ResourceNamespace("Test")).toThrow();
   });
