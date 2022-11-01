@@ -1,0 +1,5 @@
+.github/
+src/
+.prettieringore
+jest.config.js
+tsconfig.json
