@@ -61,9 +61,6 @@ export class InControl {
   }
 
   public generateFiles(): Promise<void[]> {
-    Array.from(InControl.configPaths).map(([_, path]) =>
-      writeFile(path, JSON.stringify({}, undefined, 2))
-    );
     return Promise.all(
       Array.from(InControl.configPaths).map(([config, path]) =>
         writeFile(
