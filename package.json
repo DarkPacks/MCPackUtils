@@ -1,5 +1,5 @@
 {
-  "name": "mc-pack-utils",
+  "name": "@darkpacks/mc-pack-utils",
   "version": "1.18.0-1.0.0",
   "description": "",
   "main": "index.js",
@@ -8,6 +8,10 @@
     "test": "jest"
   },
   "author": "Justin Russo <justin@justinrusso.dev>",
+  "repository": {
+    "url": "https://github.com/DarkPacks/MCPackUtils",
+    "type": "git"
+  },
   "devDependencies": {
     "@types/jest": "^29.2.0",
     "@types/node": "^18.11.8",
